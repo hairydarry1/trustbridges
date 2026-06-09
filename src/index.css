@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@405;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@media print {
+  body {
+    background-color: white !important;
+  }
+  body * {
+    visibility: hidden !important;
+  }
+  #printable-pdf-modal, #printable-pdf-modal * {
+    visibility: visible !important;
+  }
+  #printable-pdf-modal {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    padding: 15mm !important;
+    z-index: 9999999 !important;
+    border: none !important;
+    background: #fdfbfa !important;
+    box-shadow: none !important;
+  }
+  /* Hide close and print action buttons on paper */
+  .no-print-btn {
+    display: none !important;
+  }
+}
